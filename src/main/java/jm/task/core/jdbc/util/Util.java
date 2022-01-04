@@ -39,6 +39,7 @@ public class Util {
                 properties.setProperty("dialect", "org.hibernate.dialect.MySQLDialect");
                 properties.setProperty("hibernate.connection.driver_class", "com.mysql.cj.jdbc.Driver");
                 properties.setProperty("show_sql", "true");
+                properties.setProperty("hbm2ddl.auto", "update");
 
                 factory = new Configuration().addProperties(properties)
                         .addAnnotatedClass(User.class).buildSessionFactory();
